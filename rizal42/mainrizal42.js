@@ -9,10 +9,13 @@ const ACCOUNT_NAME = "";
 const PORT_NUMBER = "";
 const NODE_URL = "http://:8888";
 const PRIVATE_KEY = "";
+const Json_Rpc = new JsonRpc(NODE_URL);
+const signatures = new JsSignatureProvider([PRIVATE_KEY]);
+
 
 const api = new Api({
-  rpc: new JsonRpc(NODE_URL),
-  signatureProvider: new JsSignatureProvider([PRIVATE_KEY])
+  rpc: Json_Rpc,
+  signatureProvider: signatures,
 });
 
 const app = express();
