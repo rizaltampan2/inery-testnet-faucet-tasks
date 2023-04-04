@@ -3,7 +3,7 @@ DEMO DAPP : http://139.162.49.74:3000/
 Cara menggunakan
 Clone repo dengan menggunakan perintah berikut
 
-Git clone https://github.com/rizaltampan2/inery-testnet-faucet-tasks -b task5
+git clone https://github.com/rizaltampan2/inery-testnet-faucet-tasks -b task5
 
 Masuk ke folder rizal42
 
