@@ -27,9 +27,10 @@ app.use(express.static('dapp42'));
 app.post('/', async (req, res) => {
   const action = req.body.action;
   const dataId = parseInt(req.body.dataId);
+  const dataCm = parseInt(req.body.dataCm);
   const data = req.body.data;
 
-  if (['create', 'read', 'update', 'destroy'].includes(action) && !isNaN(dataId)) {
+  if (['create', 'read', 'update', 'destroy'].includes(action) && !isNaN(dataId) && !isNaN(dataCm)) {
     try {
       const result = await api.transact({
         actions: [
